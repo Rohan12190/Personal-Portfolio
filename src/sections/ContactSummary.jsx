@@ -38,7 +38,7 @@ const ContactSummary = () => {
       ref={containerRef}
       className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
     >
-      <Marquee items={items} />
+      <Marquee items={items} className="text-white bg-black" />
       <div className="overflow-hidden font-light text-center contact-text-responsive">
         <p>
           “ Let’s build a <br />
