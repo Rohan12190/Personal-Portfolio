@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .text {
+      font-family: monospace;
+      /* Changed from 80px to 75px to add padding */
+      font-size: 75px;
+      font-weight: bold;
+      fill: #111;
+    }
+    @media (prefers-color-scheme: dark) {
+      .text {
+        fill: #eee;
+      }
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" class="text">&lt;R&gt;</text>
+</svg>
