@@ -4,8 +4,6 @@ import Hero from "./sections/Hero";
 import ReactLenis from "lenis/react";
 import { useProgress } from "@react-three/drei";
 
-// Lazily import the sections that are below the fold.
-// This means their code won't be downloaded until they are needed.
 const ServiceSummary = lazy(() => import("./sections/ServiceSummary"));
 const Services = lazy(() => import("./sections/Services"));
 const About = lazy(() => import("./sections/About"));
@@ -19,14 +17,14 @@ const App = () => {
 
   useEffect(() => {
     if (progress === 100) {
-      // A small delay to prevent a jarring transition
+      
       setTimeout(() => setIsReady(true), 500);
     }
   }, [progress]);
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
-      {/* Loading Screen Overlay */}
+      
       {!isReady && (
         <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white transition-opacity duration-700 font-light">
           <p className="mb-4 text-xl tracking-widest animate-pulse">
@@ -41,7 +39,7 @@ const App = () => {
         </div>
       )}
 
-      {/* Main Content */}
+      
       <div
         className={`${
           isReady ? "opacity-100" : "opacity-0"
@@ -49,11 +47,7 @@ const App = () => {
       >
         <Navbar />
         <Hero />
-        
-        {/*
-          The Suspense component shows a fallback UI (like a simple "Loading...")
-          while it waits for the lazy-loaded components to be downloaded and rendered.
-        */}
+       
         <Suspense fallback={<div className="h-screen bg-black" />}>
           <ServiceSummary />
           <Services />

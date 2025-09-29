@@ -3,36 +3,41 @@ import Marquee from "../components/Marquee";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 const ContactSummary = () => {
   const containerRef = useRef(null);
   const items = [
-  "Full-Stack Development",
-  "React & Next.js",
-  "Animated UI/UX",
-  "Data Analytics",
-  "Backend Logic",
-];
+    "Full-Stack Development",
+    "React & Next.js",
+    "Animated UI/UX",
+    "Data Analytics",
+    "Backend Logic",
+  ];
   const items2 = [
-  "Let's Talk",
-  "Start a Project",
-  "Get in Touch",
-  "Ready to Build?",
-  "Let's Collaborate",
-];
+    "Let's Talk",
+    "Start a Project",
+    "Get in Touch",
+    "Ready to Build?",
+    "Let's Collaborate",
+  ];
 
   useGSAP(() => {
-    gsap.to(containerRef.current, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "center center",
-        end: "+=600 center",
-        scrub: 0.5,
-        pin: true,
-        pinSpacing: true,
-        markers: false,
-      },
+   
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "center center",
+      end: "+=500", 
+      pin: true,
+      pinSpacing: true,
+      markers: false,
     });
-  }, []);
+    
+  }, { scope: containerRef }); 
+
   return (
     <section
       ref={containerRef}

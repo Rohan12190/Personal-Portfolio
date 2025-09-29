@@ -120,7 +120,7 @@ const Works = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
-            {/* overlay */}
+            
             <div
               ref={(el) => {
                 overlayRefs.current[index] = el;
@@ -128,16 +128,16 @@ const Works = () => {
               className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path"
             />
 
-            {/* title */}
+           
             <div className="flex justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
               <h2 className="lg:text-[32px] text-[26px] leading-none">
                 {project.name}
               </h2>
               <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
             </div>
-            {/* divider */}
+            
             <div className="w-full h-0.5 bg-black/80" />
-            {/* framework */}
+            
             <div className="flex px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
               {project.frameworks.map((framework) => (
                 <p
@@ -148,7 +148,7 @@ const Works = () => {
                 </p>
               ))}
             </div>
-            {/* mobile preview image */}
+            
             <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
               <img
                 src={project.bgImage}
@@ -163,7 +163,7 @@ const Works = () => {
             </div>
           </div>
         ))}
-        {/* desktop Flaoting preview image */}
+        
         <div
           ref={previewRef}
           className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[900px] md:block hidden opacity-0"

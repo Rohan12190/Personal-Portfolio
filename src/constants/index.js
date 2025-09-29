@@ -1,4 +1,3 @@
-// index.js
 export const servicesData = [
   {
     title: "Frontend Development",
@@ -112,7 +111,7 @@ export const projects = [
     id: 3,
     name: "Mojito Brand Page", 
     description:
-      "A stylish and interactive brand page for a beverage company, focusing on animations and user experience.", // Updated Description
+      "A stylish and interactive brand page for a beverage company, focusing on animations and user experience.", 
     href: "",
     image: "/assets/projects/MojitoProject.png", 
     bgImage: "/assets/backgrounds/map.jpg",
@@ -128,7 +127,7 @@ export const projects = [
     id: 4,
     name: "Sonar Rock vs. Mine Classifier", 
     description:
-      "A machine learning model that classifies sonar signals to distinguish between underwater rocks and mines, presented in an interactive Streamlit dashboard.", // New Description
+      "A machine learning model that classifies sonar signals to distinguish between underwater rocks and mines, presented in an interactive Streamlit dashboard.", 
     href: "",
     image: "/assets/projects/sonarproject.png",
     bgImage: "/assets/backgrounds/poster.jpg",

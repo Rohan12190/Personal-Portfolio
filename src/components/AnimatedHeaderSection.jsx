@@ -44,7 +44,7 @@ const AnimatedHeaderSection = ({
   }, []);
 
   return (
-    <div ref={contextRef} className={className}> {/* Applied prop */}
+    <div ref={contextRef} className={className}> 
       <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}>
         <div
           ref={headerRef}

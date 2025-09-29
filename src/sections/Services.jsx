@@ -36,7 +36,7 @@ const Services = () => {
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
-        className="mb-10" // This class adds the space
+        className="mb-10" 
       />
       {servicesData.map((service, index) => (
         <div

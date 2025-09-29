@@ -5,12 +5,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
-  // Updated short text for the header
+  
   const text = `Passionate about building modern web experiences
     I focus on clean UI and intuitive design
     Crafting beautiful landing pages is my favorite genre`;
-
-  // Updated main "About" description
+  
   const aboutText = `A dedicated student and full-stack developer with a passion for bridging the gap between clean design and data-driven technology. My focus is on creating responsive, animated frontends with React and GSAP, always aiming for that pixel-perfect result.
   Beyond the code:
   - Currently diving deep into the world of Machine Learning and AI.
