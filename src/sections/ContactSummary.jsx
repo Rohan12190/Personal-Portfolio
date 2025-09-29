@@ -26,13 +26,14 @@ const ContactSummary = () => {
   ];
 
   useGSAP(() => {
-   
+   ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "center center",
       end: "+=500", 
       pin: true,
       pinSpacing: true,
+      // toggleClass: "is-pinned",
       markers: false,
     });
     
